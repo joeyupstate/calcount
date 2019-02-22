@@ -1,0 +1,109 @@
+
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <link rel="stylesheet" href="main.css" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Bungee+Inline|Fugaz+One|Racing+Sans+One|Righteous" rel="stylesheet">
+        
+    </head>
+    <body>
+       <h1>CalCount</h1>    
+<div id="caldiv">
+    <div class="radiodiv">
+        <label>
+            Male
+            <input type ="radio" name="rsex" id="rmale">
+        </label>
+        <label>
+                Female
+                <input type ="radio" name="rsex" id="rfemale">
+            </label>
+            </div>
+            <div class="inputs">
+                <div class="indiv">
+
+<label>Age
+            <input type="number" id="inage">
+</label>
+</div>
+<div class="indiv">
+<label>Weight
+            <input type="number" id="inweight">
+</label>
+</div>
+<div class="indiv">
+<label>Height
+            <input type="number" id="inheight">
+            </label>
+            </div>
+            <div class ="indivmulti">
+<label>Select Activity Level</label>
+            <select multiple id="inactivity">
+                
+                   
+                            <option value="None">Sedentary: No activity</option>
+                            <option value="Light">Light: Exercise 1-2 days per week</option>
+                            <option value="Moderate">Moderate: Exercise 3-5 days per week</option>
+                            <option value="Very">Heavy: Daily exercise</option>
+         
+            </select>
+            
+        </div>
+        </div>
+        
+        <p id ="demo"></p>
+        <button onclick="calcount()">Submit</button>
+        <script src="" async defer></script>
+        <script>
+            function calcount(){
+                let female=document.getElementById("rfemale");
+                let male= document.getElementById("rmale");
+                let age= document.getElementById("inage").value;
+                let weight= document.getElementById("inweight").value;
+                let height= document.getElementById("inheight").value;
+
+                //variables for activity multiselector
+                let activityOptions = document.getElementById('inactivity')
+                let activitySelection = Array.from(activityOptions.selectedOptions)
+                 .map(option => option.value) 
+//none
+if(activitySelection == "None" && male.checked == true){document.getElementById("demo").innerHTML=((weight * 6.23) + (height * 12.7) - (age *6.8) + 66)  * 1.2 ;}
+ if(activitySelection == "None" && female.checked == true){document.getElementById("demo").innerHTML=((weight * 4.35) + (height * 4.7) - (age *4.7) + 655) * 1.2 ;}
+
+
+ //light
+ if(activitySelection == "Light" && male.checked == true){document.getElementById("demo").innerHTML=((weight * 6.23) + (height * 12.7) - (age *6.8) + 66) * 1.375 ;}
+ if(activitySelection == "Light" && female.checked == true){document.getElementById("demo").innerHTML=((weight * 4.35) + (height * 4.7) - (age *4.7) + 655) * 1.375 ;}
+            
+			
+//moderate
+if(activitySelection == "Moderate" && male.checked == true){document.getElementById("demo").innerHTML=((weight * 6.23) + (height * 12.7) - (age *6.8) + 66) * 1.55 ;}
+
+if(activitySelection == "Moderate" && female.checked == true){document.getElementById("demo").innerHTML=((weight * 4.35) + (height * 4.7) - (age *4.7) + 655) * 1.55 ;}
+
+
+//heavy		
+if(activitySelection == "Very" && female.checked == true){document.getElementById("demo").innerHTML=((weight * 4.35) + (height * 4.7) - (age *4.7) + 655) * 1.725 ;
+
+            }
+if(activitySelection == "Very" && male.checked == true){document.getElementById("demo").innerHTML=((weight * 6.23) + (height * 12.7) - (age *6.8) + 66) * 1.725 ;
+
+            }
+			}
+			
+
+        
+        </script>
+    </body>
+</html>
+

@@ -1,0 +1,155 @@
+/*
+font-family: 'Righteous', cursive;
+font-family: 'Fugaz One', cursive;
+font-family: 'Bungee Inline', cursive;
+font-family: 'Racing Sans One', cursive;
+*/
+
+body{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(-70deg, #30cbfa 60%, rgb(240, 243, 238) 60%);
+}
+#caldiv{
+    display:flex;
+    flex-direction:column;
+    brder:2px solid black;
+    height:500px;
+    justify-content: center;
+    align-items: center;
+    width:50%;
+    
+   
+
+}
+
+.radiodiv{
+    bordr:1px solid black;
+    display:flex;
+    flex-direction:column;
+    align-items: flex-end;
+}
+
+.inputs{
+    borer:1px solid black;
+    display:flex;
+    flex-direction:column;
+    max-width:400px;
+    width:300px;
+    margin:20px;
+}
+
+
+
+.indiv{
+    borer:1px solid black;
+    text-align: right;
+    margin:10px;
+}
+
+.indivmulti{
+display:flex;
+flex-direction:column;
+brder:1px solid black;
+
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 820px) {
+    /* Styles */
+    
+    
+body{
+    display:flex;
+    jusify-content: center;
+    alin-items: center;
+    background:linear-gradient(-70deg, #30cbfa 60%, rgb(240, 243, 238) 60%);
+
+    height:100%;
+    flex-direction: column;
+    font-family: 'Righteous', cursive;
+    height:100%;
+                overflow: scroll;
+        -webkit-overflow-scrolling: touch;
+}
+
+h1{
+    font-family: 'Righteous', cursive;
+}
+#caldiv{
+    display:flex;
+    flex-direction:column;
+    order:2px solid black;
+
+    justify-content: center;
+    align-items: center;
+    width:300px;
+
+    
+    
+    
+   
+
+}
+
+.radiodiv{
+    bordr:1px solid black;
+    display:flex;
+    flex-direction:column;
+    align-items: flex-end;
+}
+
+.inputs{
+    boder:1px solid black;
+    display:flex;
+    flex-direction:column;
+    max-width:400px;
+    width:300px;
+    margin:20px;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.indiv{
+    borer:1px solid black;
+    text-align: right;
+    margin-top:10px;
+    margin-right:50px;
+}
+
+.indivmulti{
+display:flex;
+flex-direction:column;
+brder:1px solid black;
+margin-top:20px;
+
+}
+
+.indivmulti label{
+    text-align:center;
+    margin-bottom:5px;
+}
+
+#inage{
+    border:2px solid black;
+    width:30px;
+    margin-le
+}
+
+#inweight{
+    border:2px solid black;
+    width:30px;
+
+}
+
+#inheight{
+    border:2px solid black;
+    width:30px;
+}
+
+#inactivity{
+    border:2px solid black;
+    width:240px;
+}
